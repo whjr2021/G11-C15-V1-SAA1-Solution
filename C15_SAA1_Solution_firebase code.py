@@ -76,7 +76,7 @@ if player_count<3:
     cary = 450
     bgy = 0
     counter = 0
-    player = Player(player_count,"John", carx, cary)
+    player = Player(player_count,"Maria", carx, cary)
 
     
     carryOn = True

@@ -65,9 +65,8 @@ if player_count < 3:
     bgy = 0
     counter = 0
     
-    # Create a player3 object
-    player1 = Player(player_count,"Daniel", 140, 450)
-    player3 = Player(player_count,"Maria", 300, 300)
+    # Create a player1 object
+    player1 = Player(player_count,"Maria", 140, 450)
     
     carryOn = True
     t1 = time.time()
@@ -79,9 +78,6 @@ if player_count < 3:
         
         yellow_car = player1.image_load("yellow_car.png", 230, 140)
         player1.player_name((player1.xloc+90, player1.yloc+130))
-        
-        red_car = player3.image_load("red_car.png", 80, 130)
-        player3.player_name((player3.xloc+20, player3.yloc+130))
         
         # Update player location
         for event in pygame.event.get():
@@ -156,7 +152,6 @@ if player_count < 3:
         screen.blit(yellow_car, (player1.xloc, player1.yloc))
         screen.blit(red_car, (player3.xloc, player3.yloc))
         player1.db_update()
-        player3.db_update()
         pygame.display.flip()
     pygame.quit()
 else:
